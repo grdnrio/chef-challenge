@@ -3,6 +3,7 @@
 # Recipe:: default
 #
 # Copyright (c) 2015 Joe Gardiner, All Rights Reserved.
+include_recipe "apt"
 
 package 'redis-server' do
   action :install
