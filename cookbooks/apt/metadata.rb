@@ -1,7 +1,0 @@
-name 'apt'
-maintainer 'Joe Gardiner'
-maintainer_email 'joe@joegardiner.co.uk'
-license 'all_rights'
-description 'Helper cookbook to update apt'
-long_description 'Helper cook book to update apt'
-version '0.1.0'

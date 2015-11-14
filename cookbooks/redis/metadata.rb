@@ -6,4 +6,4 @@ description 'Installs/Configures redis'
 long_description 'Installs/Configures redis'
 version '0.1.0'
 
-depends "apt"
+depends 'apt', '~> 2.6.1'
