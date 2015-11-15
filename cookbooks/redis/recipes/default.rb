@@ -17,7 +17,6 @@ template 'redis.conf' do
   owner 'root'
   group 'root'
   mode '0644'
-  notifies :restart, resources(:service => "redis")
 end
 
 # Enable the service
