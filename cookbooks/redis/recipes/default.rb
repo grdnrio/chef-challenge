@@ -20,7 +20,7 @@ end
 
 # block remote connections to the caching server
 firewall_rule 'redis' do
-  port 6379
+  port ['redis']['port']
   protocol :tcp
   action :deny
 end
