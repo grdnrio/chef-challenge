@@ -11,7 +11,14 @@ package 'redis-server' do
   action :install
 end
 
-# Edit config REQUIRED
+template 'redis.conf' do
+  path "#{node[:redis][:dir]}/redis.conf"
+  source 'redis.conf.erb'
+  owner 'root'
+  group 'root'
+  mode '0644'
+  notifies :restart, resources(:service => "redis")
+end
 
 # Enable the service
 service 'redis-server' do
