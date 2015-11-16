@@ -12,7 +12,7 @@ package 'redis-server' do
 end
 
 template 'redis.conf' do
-  path "#{node[:redis][:dir]}/redis.conf"
+  path "#{node['redis']['dir']}/redis.conf"
   source 'redis.conf.erb'
   owner 'root'
   group 'root'
@@ -26,7 +26,7 @@ end
 
 # block remote connections to the caching server
 firewall_rule 'redis' do
-  port ['redis']['port']
+  port node['redis']['port']
   protocol :tcp
-  action :deny
+  command :deny
 end
