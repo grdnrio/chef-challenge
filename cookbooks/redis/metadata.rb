@@ -6,5 +6,6 @@ description 'Installs/Configures redis'
 long_description 'Installs/Configures redis'
 version '0.1.3'
 
+depends 'chef-client'
 depends 'apt', '~> 2.6.1'
 depends 'firewall', '~> 2.0.0'
